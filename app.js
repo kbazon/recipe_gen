@@ -52,3 +52,4 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
+//http://localhost:3000/recipes?query='ingredient'
