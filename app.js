@@ -21,7 +21,6 @@ app.get('/recipes', async (req, res) => {
         sourceUrl: recipe.sourceUrl,
       }));
 
-      // Create an HTML page
       const htmlPage = `
         <!DOCTYPE html>
         <html lang="en">
