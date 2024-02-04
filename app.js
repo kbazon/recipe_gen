@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
-const port = 3000; // Change as needed
+const port = 3000; 
 
 const spoonacularApiKey = 'c69613fec1914093b5aae817fafaf289'; 
 const spoonacularApiUrl = 'https://api.spoonacular.com/recipes/complexSearch';
