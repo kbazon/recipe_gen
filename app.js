@@ -4,13 +4,13 @@ const axios = require('axios');
 const app = express();
 const port = 3000; // Change as needed
 
-const spoonacularApiKey = 'c69613fec1914093b5aae817fafaf289'; // Replace with your actual Spoonacular API key
+const spoonacularApiKey = 'c69613fec1914093b5aae817fafaf289'; 
 const spoonacularApiUrl = 'https://api.spoonacular.com/recipes/complexSearch';
 
 app.use(express.json());
 
 app.get('/recipes', async (req, res) => {
-  const query = req.query.query || ''; // Default to an empty string if not provided
+  const query = req.query.query || '';
 
   try {
     const response = await axios.get(`${spoonacularApiUrl}?apiKey=${spoonacularApiKey}&query=${query}`);
