@@ -41,10 +41,10 @@ app.get('/recipes', async (req, res) => {
 
       res.send(htmlPage);
     } else {
-      res.status(404).json({ error: 'No recipes found for the specified query' });
+      res.status(404).json({ error: 'No recipes found for the ingredient' });
     }
   } catch (error) {
-    console.error('Error fetching recipes:', error.message);
+    console.error('Error', error.message);
     res.status(error.response ? error.response.status : 500).json({ error: error.message });
   }
 });
