@@ -18,7 +18,6 @@ app.get('/recipes', async (req, res) => {
     if (response.data.results.length > 0) {
       const recipes = response.data.results.map(recipe => ({
         title: recipe.title,
-        sourceUrl: recipe.sourceUrl,
       }));
 
       const htmlPage = `
@@ -40,7 +39,7 @@ app.get('/recipes', async (req, res) => {
 
       res.send(htmlPage);
     } else {
-      res.status(404).json({ error: 'No recipes found for the specified query' });
+      res.status(404).json({ error: 'No recipes found for the ingredient' });
     }
   } catch (error) {
     console.error('Error fetching recipes:', error.message);
