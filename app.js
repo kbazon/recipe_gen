@@ -18,7 +18,6 @@ app.get('/recipes', async (req, res) => {
     if (response.data.results.length > 0) {
       const recipes = response.data.results.map(recipe => ({
         title: recipe.title,
-        sourceUrl: recipe.sourceUrl,
       }));
 
       
